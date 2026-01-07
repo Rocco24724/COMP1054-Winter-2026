@@ -1,2 +1,207 @@
+/* Sets character set for style sheet 
+-------------------------------------*/
 @charset "UTF-8";
+
+/* Named selector 
+-----------------*/
+
+/* Targets all h2 elements 
+--------------------------*/
+h2
+{
+    /* Sets font color 
+    ------------------*/
+    color: red;
+
+    /* Sets font style 
+    ------------------*/
+    font-style: italic;
+}
+
+/* ID selector
+--------------*/
+
+/*Targets ID "project"
+---------------------*/
+#project
+{
+    /* Sets font color 
+    ------------------*/
+    color: olive;
+}
+
+/*Class selector
+----------------*/
+
+/*Targets class "about"
+----------------------*/
+.about
+{
+    /* Sets background color 
+    ------------------------*/
+    background-color: lightblue;
+}
+
+/*Contextual selector
+---------------------*/
+
+/*targets paragraphs "<p>" in a section element "<section>"
+-----------------------------------------------------------*/
+section p
+{
+    /* Sets font color 
+    ------------------*/
+    color: darkorange;
+}
+
+/*Targets paragraphs "<p>" that is a child of the class "subproject"
+-------------------------------------------------------------------*/
+.subproject p
+{
+    /* Sets font color 
+    ------------------*/
+    color: darkblue;
+}
+
+/*Grouped selector
+------------------*/
+
+/*Targets header 1, 2, and 3 elements "<h1>, <h2>, <h3>"
+--------------------------------------------------------*/
+h1, h2, h3
+{
+    /*Sets font family
+    ------------------*/
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Pseudoclass selector
+----------------------*/
+
+/*Targets links
+---------------*/
+a:link
+{
+    /* Sets font color 
+    ------------------*/
+    color: darkgreen;
+
+    /*Sets text decoration to none
+    ------------------------------*/
+    text-decoration: none;
+}
+
+/*Targets links that have been visited
+-------------------------------------*/
+a:visited
+{
+    /* Sets font color 
+    ------------------*/
+    color: red;
+}
+
+/*Targets links that are in focus
+---------------------------------*/
+a:focus
+{
+    /* Sets background color 
+    ------------------------*/
+    background-color: yellow;
+}
+
+/*Targets links that are being hovered 
+--------------------------------------*/
+a:hover
+{   
+    /*Underlines text
+    -----------------*/
+    text-decoration: underline;
+}
+
+/*Targets links that are being clicked
+--------------------------------------*/
+a:active
+{
+    /* Sets font color 
+    ------------------*/
+    color: darkorange;
+}
+
+/* Structural pseudo-class selector
+-----------------------------------*/
+
+/*Targets every third element in a list "<li>"
+----------------------------------------------*/
+li:nth-child(3n)
+{
+    /* Sets background color 
+    ------------------------*/
+    background-color: white;
+}
+
+/*Targets every even element in a list "<li>"
+----------------------------------------------*/
+li:nth-of-type(even)
+{
+    /* Sets font weight 
+    -------------------*/
+    font-weight: bold;
+}
+
+/* Sibling and pseudoelement selector
+-------------------------------------*/
+
+/* Targets first paragraph "<p>" that follows a <h1> 
+----------------------------------------------------*/
+h1 + p::first-line
+{
+    /* Sets text to uppcase 
+    -----------------------*/
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
