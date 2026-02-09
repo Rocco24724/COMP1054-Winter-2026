@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.lyrics {
+    /* Sets padding */
+    padding: 20px;
+
+    /* Alows the style of the lyrics to stay when scrolling with this the style goes away when you scroll down */
+    overflow-y: auto;
+
+    /* Sets colour of background and text */
+    background-color: #0e2431;
+    color: #e1dbce;;
+}
+
+.song-article {
+    /* Sets the article about the band in the bottom right corner of the webpage */
+    position: fixed; 
+    top: 0;
+    right: 0;
+    
+    /* Makes the article only take up 30% of the webpage so that the lyrics can take up the other 70% and sets it to 50% of the webpage*/
+    width: 30%;
+    height: 50vh;
+    padding: 20px;
+
+    /* Sets colour of background and text */
+    background-color: #2e453a; /* Optional background for visibility */
+    color: #e1dbce;
+
+    /* Sets line height for readability */
+    line-height: 1.7;
+}
+
+.band {
+    /* Sets the article about the band in the bottom right corner of the webpage */
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+    
+    /* Makes the article only take up 30% of the webpage so that the lyrics can take up the other 70% and sets it to 50% of the webpage*/
+    width: 30%;
+    height: 50vh;
+    padding: 20px;
+
+    /* Sets colour of background and text */
+    background-color: #2e453a; /* Optional background for visibility */
+    color: #e1dbce;
+
+    /* Sets line height for readability */
+    line-height: 1.7
+}
+
+/* Sets location of album cover */
+.cover, img {
+    position: fixed;
+    left: 31.2%;
+    top: 0;
+}
