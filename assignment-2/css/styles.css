@@ -201,3 +201,120 @@ main > aside:first-of-type figcaption p:last-child {
   letter-spacing: 0.08em;
   margin-top: 0.3rem;
 }
+
+/* Adds border, white background and padding to the box */
+main > aside:last-of-type {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 0.75rem 0.9rem;
+  margin-top: 0.75rem;
+}
+
+/* Styles the On Our Cover heading */
+main > aside:last-of-type h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+
+/* Styles the red hot dinners tagline text */
+main > aside:last-of-type > p {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-top: 2px solid #1a1a1a;
+  padding-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Stops the em tag inside the tagline from being italic */
+main > aside:last-of-type > p em {
+  font-style: normal;
+}
+
+/* Makes each list item a flex row so the page number and text sit side by side */
+main > aside:last-of-type ol li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Pulls the page number from the value attribute and displays it */
+main > aside:last-of-type ol li::before {
+  content: attr(value);
+  font-weight: 700;
+  min-width: 2rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Adds a line across the top and spacing above the footer */
+footer {
+  border-top: 1px solid #ccc;
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+/* Styles the footer text small, grey, uppercase and right aligned */
+footer p {
+  font-size: 0.7rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: right;
+}
+
+/* Makes the bullet dot between the date and site name orange */
+footer em {
+  font-style: normal;
+  color: #e84d0e;
+  margin: 0 0.3em;
+}
+
+/* Keeps the page number dark so it stands out */
+footer strong {
+  color: #1a1a1a;
+}
+
+/* This final section is used to make the page work better on phones */
+@media (max-width: 620px) {
+
+  /* Removes the outer margin and reduces padding on small screens */
+  #container {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  /* Shrinks the large title so it fits on a small screen */
+  header h1 {
+    font-size: 3rem;
+  }
+
+  /* Turns off the grid so everything stacks vertically */
+  main {
+    display: block;
+  }
+
+  /* Makes the photo and caption sit side by side instead of stacking */
+  main > aside:first-of-type {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+  }
+
+  /* Fixes the photo at 160px wide so it does not take up the full screen */
+  main > aside:first-of-type figure {
+    flex: 0 0 160px;
+  }
+
+  /* Adds spacing below the On Our Cover box */
+  main > aside:last-of-type {
+    margin-bottom: 1rem;
+  }
+}
