@@ -62,3 +62,142 @@ header h1 {
   margin: 0 0 0.75rem;
   letter-spacing: -0.02em;
 }
+
+/* Creates the grid with a fixed left column and flexible right column */
+main {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 1.5rem;
+}
+
+/* Puts all three sections in the right column */
+main > section {
+  grid-column: 2;
+}
+
+/* Puts the photo aside in the left column spanning two rows */
+main > aside:first-of-type {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* Puts the On Our Cover box in the left column below the photo */
+main > aside:last-of-type {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: start;
+}
+
+/* Adds spacing below each section */
+main > section {
+  margin-bottom: 1.2rem;
+}
+
+/* Styles the section heading text */
+main > section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #1a1a1a;
+  line-height: 1.1;
+  padding-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Adds a green bar above the Live Well heading */
+main > section:nth-of-type(1) h2 { border-top: 7px solid #6a9a1f; }
+
+/* Adds a pink bar above the Style heading */
+main > section:nth-of-type(2) h2 { border-top: 7px solid #cc1a6e; }
+
+/* Adds a teal bar above the Health heading */
+main > section:nth-of-type(3) h2 { border-top: 7px solid #008b99; }
+
+/* Makes each list item a flex row so the page number and text sit side by side */
+main > section ol li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.87rem;
+}
+
+/* Pulls the page number from the value attribute and displays it */
+main > section ol li::before {
+  content: attr(value);
+  font-weight: 700;
+  min-width: 1.8rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Keeps the text block as a normal block element */
+main > section ol li > div {
+  display: block;
+}
+
+/* Styles the label text and makes it inline so it sits beside the body copy */
+main > section ol li h3 {
+  font-size: 0.87rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline;
+  margin-right: 0.2em;
+}
+
+/* Makes the body copy inline so it flows on the same line as the label */
+main > section ol li p {
+  display: inline;
+  font-size: 0.87rem;
+}
+
+/* Makes the Live Well labels green */
+main > section:nth-of-type(1) ol li h3 { color: #6a9a1f; }
+
+/* Makes the Style labels pink */
+main > section:nth-of-type(2) ol li h3 { color: #cc1a6e; }
+
+/* Makes the Health labels teal */
+main > section:nth-of-type(3) ol li h3 { color: #008b99; }
+
+/* This section styles the model photo on the left */
+
+/* Removes default figure margin */
+main > aside:first-of-type figure {
+  margin: 0;
+}
+
+/* Makes the image fill the full column width */
+main > aside:first-of-type img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Adds padding above the caption */
+main > aside:first-of-type figcaption {
+  padding-top: 0.4rem;
+  font-size: 0.8rem;
+}
+
+/* Styles the large italic page number in the caption */
+main > aside:first-of-type figcaption em {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+}
+
+/* Styles the photographer credit in small grey uppercase text */
+main > aside:first-of-type figcaption p:last-child {
+  font-size: 0.65rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+}
