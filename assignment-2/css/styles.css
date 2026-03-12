@@ -1,0 +1,64 @@
+
+/* Imports the two fonts used on the page from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+/* This section sets the base styles for the whole page */
+
+/* Makes padding and borders included in element widths */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Sets the default font, text colour, background and removes default margin */
+body {
+  font-family: 'Source Sans 3', Georgia, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #1a1a1a;
+  background: #ccc;
+  margin: 0;
+}
+
+/* Stops images from overflowing their container */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Removes default margins from headings */
+h2, h3 { margin: 0; }
+
+/* Removes default margin from paragraphs */
+p { margin: 0; }
+
+/* Removes default padding, margin and bullet points from lists */
+ol { margin: 0; padding: 0; list-style: none; }
+
+/* Centers the page, sets max width, background colour, padding and shadow */
+#container {
+  max-width: 860px;
+  margin: 2rem auto;
+  background: #f3f2ee;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+}
+
+/* Styles the small issue info line */
+header p {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* Styles the large WD Contents title */
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #e84d0e;
+  line-height: 1;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
